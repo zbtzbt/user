@@ -33,4 +33,16 @@ public class UserController {
     public User get(@PathVariable Integer userId) {
         return userDao.getUser(userId);
     }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    @ResponseBody
+    public boolean update(@RequestBody User user) {
+        return userDao.updateUser(user.getUserId(),user.getName());
+    }
+
+    @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public boolean delete(@PathVariable Integer userId) {
+        return userDao.deleteUser(userId);
+    }
 }

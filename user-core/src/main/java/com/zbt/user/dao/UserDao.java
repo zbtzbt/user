@@ -24,7 +24,7 @@ public interface UserDao {
     @SQL("insert into #table(" + COLUMNS + ") values(:1, :2)")
     int addUser(@DataSourceShardBy @TableShardBy int userId, String name);
 
-    @SQL("select " + COLUMNS + " from #table where user_id = :1")
+    @SQL("select user_id, name, GMT_CREATE, GMT_UPDATE from #table where user_id = :1")
     User getUser(@DataSourceShardBy @TableShardBy int userId);
 
     @SQL("update #table set name=:2 where user_id = :1")

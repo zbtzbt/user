@@ -1,5 +1,7 @@
 package com.zbt.user.model;
 
+import java.util.Date;
+
 /**
  * @author Frank Zhang
  * @Time 16/5/6.
@@ -8,6 +10,8 @@ public class User {
 
     private Integer userId;
     private String name;
+    private Date gmtUpdate;
+    private Date gmtCreate;
 
     public Integer getUserId() {
         return userId;
@@ -23,5 +27,21 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Date getGmtCreate() {
+        return gmtCreate;
+    }
+
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
+
+    public Date getGmtUpdate() {
+        return gmtUpdate;
+    }
+
+    public void setGmtUpdate(Date gmtUpdate) {
+        this.gmtUpdate = gmtUpdate;
     }
 }

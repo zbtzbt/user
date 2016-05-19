@@ -22,6 +22,5 @@ public class UserServer {
         SpringApplication.run(UserServer.class, args);
         System.out.println(new SimpleDateFormat("[yyyy-MM-dd HH:mm:ss]").format(new Date())
                 + " user service server started!");
-//        com.alibaba.dubbo.container.Main.main(args);
     }
 }
